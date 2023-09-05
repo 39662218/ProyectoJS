@@ -115,3 +115,9 @@ button::before {
   width: auto;
   height: auto;
 }
+
+@media (max-width: 768px) {
+  .video-container {
+    max-width: 100%; /* Cambia el ancho máximo para adaptarse a pantallas pequeñas */
+  }
+}
