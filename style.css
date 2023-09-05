@@ -102,3 +102,8 @@ button::before {
     background-position: 0 0;
   }
 }
+video {
+  width: auto;
+  height: auto;
+  text-align: center;
+}
