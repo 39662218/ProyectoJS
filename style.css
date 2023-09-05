@@ -1,3 +1,4 @@
+@import 'media';
 .container {
     text-align: center;
   }
@@ -104,3 +105,20 @@ button::before {
   }
 }
 
+
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  /* Estilos para pantallas medianas en orientación vertical */
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  /* Estilos para pantallas medianas en orientación horizontal */
+}
+@media screen and (min-width: 1200px) {
+  /* Estilos para pantallas grandes */
+}
+@media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Estilos para pantallas de alta resolución (retina) */
+}
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  /* Estilos para pantallas pequeñas en orientación horizontal */
+}
