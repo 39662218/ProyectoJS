@@ -56,24 +56,24 @@ function handleCellClick(clickedCellEvent /** Type Event **/) {
   }
 }
 
-function handleCellPlayed(clickedCell /** object HTML **/, clickedCellIndex) {
-  GAME_STATE[clickedCellIndex] = currentPlayer // Agrega en la posición correspondiente el valor ya sea "X" u "O" en el estado actual del juego
-  clickedCell.innerHTML = currentPlayer // Agrega en el HTML el valor del jugador
+function handleCellPlayed(clickedCell , clickedCellIndex) {
+  GAME_STATE[clickedCellIndex] = currentPlayer 
+  clickedCell.innerHTML = currentPlayer
 }
 
 function handleResultValidation() {
   let roundWon = false
-  for (let i = 0; i < WINNINGS.length; i++) { // Itera cada uno de las posibles combinaciones ganadores
-    const winCondition = WINNINGS[i] // Guarda la combinación por ejemplo: [0, 1, 2]
+  for (let i = 0; i < WINNINGS.length; i++) { 
+    const winCondition = WINNINGS[i] 
     let position1 = GAME_STATE[winCondition[0]],
       position2 = GAME_STATE[winCondition[1]],
-      position3 = GAME_STATE[winCondition[2]] // Almacena el valor del estado actual del juego según las posiciones de winCondition
+      position3 = GAME_STATE[winCondition[2]] 
 
     if (position1 === '' || position2 === '' || position3 === '') {
-      continue; // Si hay algún valor vacio nadie ha ganado aún
+      continue; 
     }
     if (position1 === position2 && position2 === position3) {
-      roundWon = true // Si todas las posiciones coinciden entonces, dicho jugador ha ganado la partida
+      roundWon = true 
       break
     }
   }
@@ -84,7 +84,7 @@ function handleResultValidation() {
     return
   }
 
-  let roundDraw = !GAME_STATE.includes("") // Si todas las celdas tienen valor y la sentencia anterior fue falsa entonces es empate
+  let roundDraw = !GAME_STATE.includes("") 
   if (roundDraw) {
     handleStatusDisplay(DRAW_MESSAGE())
     gameActive = false
