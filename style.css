@@ -107,13 +107,13 @@ button::before {
 .video-container {
   position: relative;
   overflow: hidden;
-  max-width: auto; /* Ajusta el ancho máximo según tus necesidades */
+  max-width: 100px; /* Ajusta el ancho máximo según tus necesidades */
 }
 
 /* Hace que el video sea 100% del ancho del contenedor */
 .video-container video {
   width: auto;
-  height: auto;
+  height: 100px;
 }
 
 @media (max-width: 768px) {
